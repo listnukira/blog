@@ -1,6 +1,7 @@
 ##### Menu
 menu:
   Home: /
+  Leetcode: /LeetCode
   Archives: /archives
   About: /about
 ## you can create `tags` and `categories` folders in `../source`.
@@ -89,8 +90,8 @@ duoshuo:
   short_name:    ##e.g. wuchong   for duoshuo short name.
 
 disqus:
-  enable: false  ## disqus.com
-  short_name:    ##e.g. wuchong   for disqus short name.  
+  enable: true  ## disqus.com
+  short_name: listplayers   ##e.g. wuchong   for disqus short name.  
 
 #### Share button
 jiathis:
@@ -112,9 +113,9 @@ google_cse:
   
 #### Analytics
 google_analytics:
-  enable: false
-  id:        ## e.g. UA-46321946-2 your google analytics ID.
-  site:      ## e.g. wuchong.me your google analytics site or set the value as auto.
+  enable: true
+  id: UA-49479879-1       ## e.g. UA-46321946-2 your google analytics ID.
+  site: http://blog.listnukira.com     ## e.g. wuchong.me your google analytics site or set the value as auto.
 ## You MUST upgrade to Universal Analytics first!
 ## https://developers.google.com/analytics/devguides/collection/upgrade/?hl=zh_CN
 
