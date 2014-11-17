@@ -4,6 +4,8 @@ date: 2014-11-13
 
 決定把以前在 Google Blogger 和 Logdown 上面的文章都慢慢搬來 Hexo，這篇文章修改 Hexo 預設的 Hello world 文章，把與 Hexo 有關的一些基礎設定與指令留著，新增一些設定的參考網站，方便日後參考。
 
+<!-- more -->
+
 Welcome to [Hexo](http://hexo.io/)! This is my very first post. Check [documentation](http://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [trobuleshooting](http://hexo.io/docs/troubleshooting.html) or you can ask hexo on [GitHub](https://github.com/hexojs/hexo/issues).
 
 ## Quick Start
