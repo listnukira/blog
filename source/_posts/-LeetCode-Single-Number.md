@@ -12,7 +12,9 @@ tags:
 
 用 XOR 運算子是最簡單且最直覺的方式，相同的數字經過 XOR 之後會變成 0，所以最後會剩下單一的那個數字
 
-``` c++ Solution
+### Solution
+
+``` c++
 class Solution {
 public:
     int singleNumber(int A[], int n) {
