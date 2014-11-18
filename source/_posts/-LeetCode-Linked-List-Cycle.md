@@ -27,8 +27,8 @@ tags:
 class Solution {
 public:
     bool hasCycle(ListNode *head) {
-        struct ListNode* fast = head;
-        struct ListNode* slow = head;
+        struct ListNode *fast = head;
+        struct ListNode *slow = head;
 
         while (fast != NULL && fast->next != NULL) {
             fast = fast->next->next;
