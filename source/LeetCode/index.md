@@ -9,6 +9,7 @@ date: 2014-11-17 16:34:13
 ####[Pascal's Triangle](/2014/08/28/-LeetCode-Pascal-s-Triangle/)
 ####[Pascal's Triangle II](/2014/08/28/-LeetCode-Pascal-s-Triangle-II/)
 ####[Valid Parentheses](/2014/08/29/-LeetCode-Valid-Parentheses/)
-####[Longest Valid Parentheses](/2014/11/18/-LeetCode-Longest-Valid-Parentheses/)
+####[Longest Valid Parentheses](/2014/09/01/-LeetCode-Longest-Valid-Parentheses/)
+####[Linked List Cycle](/2014/09/01/-LeetCode-Linked-List-Cycle/)
 
 Constructing...
