@@ -17,5 +17,8 @@ date: 2014-11-17 16:34:13
 ####[Surrounded Regions](/2014/09/19/-LeetCode-Surrounded-Regions/)
 ####[Remove Duplicates from Sorted Array](/2014/09/04/-LeetCode-Remove-Duplicates-from-Sorted-Array/)
 ####[Remove Duplicates from Sorted Array II](/2014/09/04/-LeetCode-Remove-Duplicates-from-Sorted-Array-II/)
+####[Remove Duplicates from Sorted List](/2014/09/11/-LeetCode-Remove-Duplicates-from-Sorted-List/)
+####[Remove Duplicates from Sorted List II](/2014/09/12/-LeetCode-Remove-Duplicates-from-Sorted-List-II/)
+####[Remove Nth Node From End of List](/2014/09/09/-LeetCode-Remove-Nth-Node-From-End-of-List/)
 
 Constructing...
