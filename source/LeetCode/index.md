@@ -10,9 +10,12 @@ date: 2014-11-17 16:34:13
 ####[Pascal's Triangle II](/2014/08/28/-LeetCode-Pascal-s-Triangle-II/)
 ####[Valid Parentheses](/2014/08/29/-LeetCode-Valid-Parentheses/)
 ####[Longest Valid Parentheses](/2014/09/01/-LeetCode-Longest-Valid-Parentheses/)
+####[Generate Parentheses](/2014/09/03/-LeetCode-Generate-Parentheses/)
 ####[Linked List Cycle](/2014/09/01/-LeetCode-Linked-List-Cycle/)
 ####[Linked List Cycle II](/2014/09/02/-LeetCode-Linked-List-Cycle-II/)
 ####[Same Tree](/2014/09/03/-LeetCode-Same-Tree/)
 ####[Surrounded Regions](/2014/09/19/-LeetCode-Surrounded-Regions/)
+####[Remove Duplicates from Sorted Array](/2014/09/04/-LeetCode-Remove-Duplicates-from-Sorted-Array/)
+####[Remove Duplicates from Sorted Array II](/2014/09/04/-LeetCode-Remove-Duplicates-from-Sorted-Array-II/)
 
 Constructing...
