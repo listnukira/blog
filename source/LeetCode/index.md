@@ -17,6 +17,8 @@ date: 2014-11-17 16:34:13
 ####[Rotate List](/-LeetCode-Rotate-List/)
 ####[Same Tree](/-LeetCode-Same-Tree/)
 ####[Maximum Depth of Binary Tree](/-LeetCode-Maximum-Depth-of-Binary-Tree/)
+####[Path Sum](/-LeetCode-Path-Sum/)
+####[Path Sum II](/-LeetCode-Path-Sum-II/)
 ####[Surrounded Regions](/-LeetCode-Surrounded-Regions/)
 ####[Reverse Words in a String](/-LeetCode-Reverse-Words-in-a-String/)
 ####[Remove Element](/-LeetCode-Remove-Element/)
