@@ -14,6 +14,7 @@ date: 2014-11-17 16:34:13
 ####[Longest Valid Parentheses](/-LeetCode-Longest-Valid-Parentheses/)
 ####[Generate Parentheses](/-LeetCode-Generate-Parentheses/)
 ####[Add Two Numbers](/-LeetCode-Add-Two-Numbers/)
+####[Merge Two Sorted Lists](/-LeetCode-Merge-Two-Sorted-Lists/)
 ####[Linked List Cycle](/-LeetCode-Linked-List-Cycle/)
 ####[Linked List Cycle II](/-LeetCode-Linked-List-Cycle-II/)
 ####[Reverse Linked List II](/-LeetCode-Reverse-Linked-List-II/)
@@ -43,3 +44,4 @@ date: 2014-11-17 16:34:13
 ####[Reverse-Integer](/-LeetCode-Reverse-Integer/)
 ####[Plus One](/-LeetCode-Plus-One/)
 ####[Jump Game](/-LeetCode-Jump-Game/)
+####[Jump Game II](/-LeetCode-Jump-Game-II/)
