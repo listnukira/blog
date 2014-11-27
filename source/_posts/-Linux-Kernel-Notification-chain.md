@@ -3,7 +3,9 @@ date: 2014-10-13 23:33:19
 categories: Linux Kernel
 tags: Linux Kernel
 ---
-Linux Kernel 用 Notification chain 來傳遞事件的發生或是狀態的改變，Notification chain 以 publish-subscribe 的機制運作，與 polling 或 request-reply 相比，Notification chain 更有效率，需要訊息的元件自己註冊，當事件發生或狀態改變時，便通知所有註冊的元件
+Linux Kernel 用 Notification chain 來傳遞事件的發生或是狀態的改變，藉由 Notification chain，模組或其他的核心元件可以對感興趣的核心事件進行註冊，當事件發生時，它們所註冊的 callback 函式會被呼叫
+
+Notification chain 以 publish-subscribe 的機制運作，與 polling 或 request-reply 相比，Notification chain 更有效率，需要訊息的元件自己註冊，當事件發生或狀態改變時，便通知所有註冊的核心元件
 
 ## Notification chain
 
@@ -26,7 +28,7 @@ Linux Kernel 用 Notification chain 來傳遞事件的發生或是狀態的改�
 
 ### 定義
 
-不管是哪一種類型的 Notification chain，都是由 notifier_block 結構所組成的串列，notifier_block 定義在 `include/linux/notifier.h`
+不管是哪一種類型的 Notification chain，都是以 notifier_block 結構為基礎所組成的串列，notifier_block 定義在 `include/linux/notifier.h`
 
 ``` c include/linux/notifier.h
 typedef int (*notifier_fn_t)(struct notifier_block *nb,
@@ -39,7 +41,11 @@ struct notifier_block {
 };
 ```
 
-notifier_block 中的 notifier_call 代表 callback 函式
+<pre>
+notifier_call 代表 callback 函式
+next 指向下一個 notifier_block
+priority 代表這個節點的優先權，數值越高代表優先權越大，會被加到 Notification chain 的前端，因此核心有事件發生時，會比較快被執行
+</pre>
 
 ### 註冊
 
@@ -50,10 +56,11 @@ notifier_block 中的 notifier_call 代表 callback 函式
 
 初始化之後，其他元件便可以利用包裹函式 register_netdevice_notifier 註冊，而 register_netdevice_notifier 會再呼叫 raw_notifier_chain_register 註冊
 
-### 事件
+### 事件通知
 
-通知訊息產生自 notifier_call_chain (kernel/notifier.c)，會向所有註冊的元件發送訊息
-例如當一個裝置要註冊為網路裝置時，會呼叫 register_netdevice (net/core/dev.c)，裡面會呼叫到包裹函式 call_netdevice_notifiers，並把 NETDEV_REGISTER 這個事件往通知鏈傳送，所有已註冊的裝置都會收到
+通知訊息產生自 notifier_call_chain (kernel/notifier.c)，會向 Notification chain 上的所有節點發送訊息
+
+例如當一個裝置要註冊為網路裝置時，會呼叫 register_netdevice (net/core/dev.c)，裡面會呼叫到包裹函式 call_netdevice_notifiers，這個函式會走遍 netdev_chain 的所有節點，並執行每個節點的 notifier_call 函式，把 NETDEV_REGISTER 這個事件通知給所有的節點知道
 
 ### 範例
 

@@ -39,6 +39,7 @@ EXPORT_UNUSED_SYMBOL_GPL() 代表以後將不再匯出這個符號，應該盡�
     __EXPORT_SYMBOL(sym, "")
 ```
 
+其中 `__CRC_SYMBOL(sym, sec)` 是用來確認 module 與核心的版本是否相符，這裡先忽略
 將 EXPORT_SYMBOL(sym) 中的 sym 用 my_funciton 代入，並且展開巨集之後會變成
 
 ``` c
