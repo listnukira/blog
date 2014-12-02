@@ -31,6 +31,7 @@ date: 2014-11-17 16:34:13
 ####[Best Time to Buy and Sell Stock](/-LeetCode-Best-Time-to-Buy-and-Sell-Stock/)
 ####[Best Time to Buy and Sell Stock II](/-LeetCode-Best-Time-to-Buy-and-Sell-Stock-II/)
 ####[Best Time to Buy and Sell Stock III](/-LeetCode-Best-Time-to-Buy-and-Sell-Stock-III/)
+####[Merge Sorted Array](/-LeetCode-Merge-Sorted-Array/)
 ####[Search in Rotated Sorted Array](/-LeetCode-Search-in-Rotated-Sorted-Array/)
 ####[Search in Rotated Sorted Array II](/-LeetCode-Search-in-Rotated-Sorted-Array-II/)
 ####[Remove Element](/-LeetCode-Remove-Element/)
