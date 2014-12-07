@@ -35,6 +35,7 @@ date: 2014-11-17 16:34:13
 ####[Surrounded Regions](/-LeetCode-Surrounded-Regions/)
 ####[Length of Last Word](/-LeetCode-Length-of-Last-Word/)
 ####[Longest Common Prefix](/-LeetCode-Longest-Common-Prefix/)
+####[Implement strStr()](/-LeetCode-Implement-strStr/)
 ####[Reverse Words in a String](/-LeetCode-Reverse-Words-in-a-String/)
 ####[Best Time to Buy and Sell Stock](/-LeetCode-Best-Time-to-Buy-and-Sell-Stock/)
 ####[Best Time to Buy and Sell Stock II](/-LeetCode-Best-Time-to-Buy-and-Sell-Stock-II/)
@@ -56,3 +57,4 @@ date: 2014-11-17 16:34:13
 ####[Valid Sudoku](/-LeetCode-Valid-Sudoku/)
 ####[Jump Game](/-LeetCode-Jump-Game/)
 ####[Jump Game II](/-LeetCode-Jump-Game-II/)
+####[Roman to Interger](/-LeetCode-Roman-to-Integer/)
