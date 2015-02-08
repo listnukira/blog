@@ -28,6 +28,7 @@ date: 2014-11-17 16:34:13
 ####[Balanced Binary Tree](/-LeetCode-Balanced-Binary-Tree/)
 ####[Flatten Binary Tree to Linked List](/-LeetCode-Flatten-Binary-Tree-to-Linked-List/)
 ####[Convert Sorted Array to Binary Search Tree](/-LeetCode-Convert-Sorted-Array-to-Binary-Search-Tree/)
+####[Convert Sorted List to Binary Search Tree](/-LeetCode-Convert-Sorted-List-to-Binary-Search-Tree/)
 ####[Maximum Depth of Binary Tree](/-LeetCode-Maximum-Depth-of-Binary-Tree/)
 ####[Minimum Depth of Binary Tree](/-LeetCode-Minimum-Depth-of-Binary-Tree/)
 ####[Binary Tree Preorder Traversal](/-LeetCode-Binary-Tree-Preorder-Traversal/)
@@ -64,3 +65,5 @@ date: 2014-11-17 16:34:13
 ####[Jump Game II](/-LeetCode-Jump-Game-II/)
 ####[Roman to Interger](/-LeetCode-Roman-to-Integer/)
 ####[Excel Sheet Column Title](/-LeetCode-Excel-Sheet-Column-Title/)
+####[Excel Sheet Column Number](/-LeetCode-Excel-Sheet-Column-Number/)
+####[Majority-Element](/-LeetCode-Majority-Element/)
