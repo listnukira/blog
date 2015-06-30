@@ -9,7 +9,7 @@ tags:
 - Divide and Conquer
 ---
 
-找出陣列出現最多次的數字 (majority element)，假設陣列不為空，而且 majority element 一定存在
+找出陣列出現超過一半以上的數字 (majority element)，假設陣列不為空，而且 majority element 一定存在
 
 <!-- more -->
 
