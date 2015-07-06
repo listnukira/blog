@@ -13,6 +13,8 @@ tags:
 
 ### Solution
 
+串列頭可能會改變，所以用 fakeHead 來簡化，遇到要刪除的值就跳過
+
 ``` c++
 /**
  * Definition for singly-linked list.
