@@ -28,3 +28,7 @@ http://ccckmit.github.io/ss/htm/book.html
 
 **畫 Flowchart/UML/Wireframes**
 https://www.gliffy.com/
+
+**兩個測試密碼強度的網站**
+https://howsecureismypassword.net/
+https://www-ssl.intel.com/content/www/us/en/forms/passwordwin.html
