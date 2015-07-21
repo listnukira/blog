@@ -4,22 +4,22 @@ categories: Linux Kernel
 tags:
 - Linux Kernel
 ---
-在 Linux 核心原始碼裡面，到處都可以看到 EXPORT_SYMBOL 系列的巨集，主要是用來匯出核心裡的符號，它的功能與 extern 很類似，但是應用卻不太一樣，由 extern 匯出的符號是供核心靜態編譯所使用，而 EXPORT_SYMBOL 匯出的符號可以給其它模組使用
+在 Linux 核心原始碼裡面，到處都可以看到 EXPORT_SYMBOL 系列的巨集，這些巨集用來匯出核心裡的符號，功能與 extern 很類似，但是應用卻不太一樣，由 extern 匯出的符號是供核心靜態編譯所使用，而 EXPORT_SYMBOL 匯出的符號可以給其它模組使用
 
 對於 Linux 核心而言，所有的符號引用都會在靜態連結的階段完成，而一個動態載入的模組可能會需要用到核心裡的函式，因此會需要 EXPORT_SYMBOL 巨集的幫助，由 EXPORT_SYMBOL 匯出的符號會統一放在一個 section，載入模組時如果有未解析的符號就會到這個 section 裡找
 
 ## EXPORT_SYMBOL
 
-EXPORT_SYMBOL 系列巨集大概分成下面幾種
+EXPORT_SYMBOL 系列巨集有下面幾種
 <pre>
-EXPORT_SYMBOL()            代表匯出給任何的 module 使用
-EXPORT_SYMBOL_GPL()        代表匯出給有 GPL-licensed 的 module 使用
-EXPORT_SYMBOL_GPL_FUTURE() 代表現在所有 module 都能使用，但是以後只給 GPL-licensed 的 module 使用
-EXPORT_UNUSED_SYMBOL()     代表以後將不再匯出這個符號，應該盡量避免使用
-EXPORT_UNUSED_SYMBOL_GPL() 代表以後將不再匯出這個符號，應該盡量避免使用
+EXPORT_SYMBOL()            匯出給任何的 module 使用
+EXPORT_SYMBOL_GPL()        匯出給有 GPL-licensed 的 module 使用
+EXPORT_SYMBOL_GPL_FUTURE() 現在所有 module 都能使用，但是以後只給 GPL-licensed 的 module 使用
+EXPORT_UNUSED_SYMBOL()     以後將不再匯出這個符號，應該盡量避免使用
+EXPORT_UNUSED_SYMBOL_GPL() 以後將不再匯出這個符號，應該盡量避免使用
 </pre>
 
-接下來以 EXPORT_SYMOL 巨集來介紹，EXPORT_SYMOL 巨集定義在 `include/linux/export.h`
+以 EXPORT_SYMOL 巨集來介紹，EXPORT_SYMOL 巨集定義在 `include/linux/export.h`
 
 ``` c include/linux/export.h
 /* For every exported symbol, place a struct in the __ksymtab section */
@@ -39,7 +39,7 @@ EXPORT_UNUSED_SYMBOL_GPL() 代表以後將不再匯出這個符號，應該盡�
     __EXPORT_SYMBOL(sym, "")
 ```
 
-其中 `__CRC_SYMBOL(sym, sec)` 是核心做版本控制所使用的，這裡先忽略
+第 4 行的 `__CRC_SYMBOL(sym, sec)` 是核心做版本控制所使用的，這裡先忽略
 將 EXPORT_SYMBOL(sym) 中的 sym 用 my_funciton 代入，並且展開巨集之後會變成
 
 ``` c
@@ -52,12 +52,13 @@ static const char __kstrtab_myfunction[]
     = VMLINUX_SYMBOL_STR(myfunction);
 
 extern const struct kernel_symbol __ksymtab_myfunction;
+
 const struct kernel_symbol __ksymtab_myfunction
-    __attribute__((section("___ksymtab+myfunction), unused))
+    __attribute__((section("___ksymtab+myfunction"), unused))
     = { (unsigned long)&myfunction, __kstrtab_myfunction }
 ```
 
-從以上程式碼可以看出 EXPORT_SYMBOL 巨集會定義兩個變數，第一個變數叫 `__kstrtab_myfunction`，是一個 char 指標，指向 `VMLINUX_SYMBOL_STR(myfunction)` 返回的字串，`VMLINUX_SYMBOL_STR` 被定義為
+從上面的程式碼可以看出 EXPORT_SYMBOL 巨集會定義兩個變數，第一個變數是第 5 行的 `__kstrtab_myfunction`，是一個 char 指標，指向 `VMLINUX_SYMBOL_STR(myfunction)` 返回的字串，`VMLINUX_SYMBOL_STR` 定義為
 
 ``` c include/linux/export.h
 /* Some toolchains use a `_' prefix for all user symbols. */
@@ -74,16 +75,16 @@ const struct kernel_symbol __ksymtab_myfunction
 #define VMLINUX_SYMBOL_STR(x) __VMLINUX_SYMBOL_STR(x)
 ```
 
-也就是根據 `CONFIG_HAVE_UNDERSCORE_SYMBOL_PREFIX` 這個設定，`VMLINUX_SYMBOL_STR(myfunction)` 可能會傳回 `myfunction` 或 `_myfunction`
+就是根據 `CONFIG_HAVE_UNDERSCORE_SYMBOL_PREFIX` 設定與否，`VMLINUX_SYMBOL_STR(myfunction)` 可能會傳回 `myfunction` 或 `_myfunction`
 
-第二個變數叫 `__ksymtab_myfunction`，是一個 kernel_symbol 結構，用來表示一個核心符號，kernel_symbol 定義為
+第二個變數是第 11 行的 `__ksymtab_myfunction`，是一個 kernel_symbol 結構，用來表示一個核心符號，kernel_symbol 定義為
 
 ``` c include/linux/export.h
 struct kernel_symbol
 {
     unsigned long value;
     const char *name;
-}
+};
 ```
 
 value 代表符號所在的位址，name 是符號的名稱
@@ -122,7 +123,7 @@ extern const unsigned long __start___kcrctab_gpl[];
 extern const unsigned long __start___kcrctab_gpl_future[];
 ```
 
-如此一來，當核心載入一個模組時，對於模組裡未解析的符號，便可以根據以上的變數，找到對應的符號，成功的載入，如果沒有 EXPORT_SYMBOL 系列巨集，就很難達到動態載入模組的特性
+有了這些資訊，當核心載入一個模組時，對於模組裡未解析的符號，便可以根據以上的變數，找到對應的符號，成功的載入
 
 ## Reference
 [Kernel Symbols](http://www.linux.com/learn/linux-training/31161-the-kernel-newbie-corner-kernel-symbols-whats-available-to-your-module-what-isnt)
