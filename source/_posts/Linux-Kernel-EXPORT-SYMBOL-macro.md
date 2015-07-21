@@ -87,12 +87,12 @@ struct kernel_symbol
 };
 ```
 
-value 代表符號所在的位址，name 是符號的名稱
+value 代表符號所在的位址，name 是符號的名稱，這兩個資訊就是最後其它模組會使用到的部分
 
 上面被定義的兩個變數 `__kstrtab_myfunction` 和` __ksymtab_myfunction` 會分別放在 `__ksymtab_strings`，`___ksymtab+myfunction` 這兩個 section 中，而這些 section 最後都會被連結器腳本統整到同一個地方，連結器腳本定義在 `include/asm-generic/vmlinux.lds.h`，這裡只列出一部分
 
 ``` c include/asm-generic/vmlinux.lds.h
-/* Kernel symbol table: Normal symbols */           \
+/* Kernel symbol table: Normal symbols */
 __ksymtab         : AT(ADDR(__ksymtab) - LOAD_OFFSET) {     \
     VMLINUX_SYMBOL(__start___ksymtab) = .;          \
     *(SORT(___ksymtab+*))                   \
@@ -101,8 +101,8 @@ __ksymtab         : AT(ADDR(__ksymtab) - LOAD_OFFSET) {     \
 
 ...
 
-/* Kernel symbol table: strings */              \
-    __ksymtab_strings : AT(ADDR(__ksymtab_strings) - LOAD_OFFSET) { \
+/* Kernel symbol table: strings */
+__ksymtab_strings : AT(ADDR(__ksymtab_strings) - LOAD_OFFSET) { \
     *(__ksymtab_strings)                    \
 }
 ```
