@@ -112,6 +112,5 @@ static int arp_netdev_event(struct notifier_block *this, unsigned long event,
 
 在 `net/core/dev.c` 裡有個函式叫 `dev_set_mac_address`，這個函式會呼叫call_netdevice_notifiers，把 NETDEV_CHANGEADDR 這個事件往通知鏈 (netdev_chain) 傳送，每個註冊的裝置都會對這個事件做處理或者忽略它
 
-## Reference site
-
+## Reference
 [The Crux of Linux Notifier Chains](http://www.opensourceforu.com/2009/01/the-crux-of-linux-notifier-chains/)
