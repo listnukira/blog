@@ -1,5 +1,7 @@
 title: Hello Hexo
 date: 2014-11-13
+categories: Hexo
+tag: Hexo
 ---
 
 決定把以前在 Google Blogger 和 Logdown 上面的文章都慢慢搬來 Hexo，這篇文章修改 Hexo 預設的 Hello world 文章，把與 Hexo 有關的一些基礎設定與指令留著，新增一些設定的參考網站，方便日後參考。
