@@ -5,7 +5,7 @@ date: 2014-11-17 16:34:13
 **C 基本觀念**
 http://www.tutorialspoint.com/cprogramming/index.htm
 
-練習 Linux Kernel 的網站
+**練習 Linux Kernel 的網站**
 http://eudyptula-challenge.org/
 
 **動態規劃 DP**
