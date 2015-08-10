@@ -16,7 +16,14 @@ tags:
 
 因為平常都是用 putty 來連到遠端的設備，根據[官方](http://ethanschoonover.com/solarized/vim-colors-solarized)的說法，必須將 putty 配色也改成 Solarized 的，如果不想更改 putty 的配色也可以，有提供選項 `let g:solarized_termcolors=256` 支援，但效果很差，不如不換...
 
-從官方網站下載配色的壓縮檔 [Solarized.zip](http://ethanschoonover.com/solarized/files/solarized.zip)，解壓縮後進到 `putty-colors-solarized` 資料夾，編輯 `solarized_dark.reg`，將第 3 行最後的 `Solarized%20Dark` 換成想更改配色的 Session，改好後執行，接著重啟 Session 應該就會套用新的配色
+從官方網站下載配色的壓縮檔 [Solarized.zip](http://ethanschoonover.com/solarized/files/solarized.zip)，解壓縮後進到 `putty-colors-solarized` 資料夾，編輯 `solarized_dark.reg`，將第 3 行最後的 `Solarized%20Dark` 換成想更改配色的 Session，改好後執行
+
+接著重新打開 putty
+
+* 把 `Connection -> Data` 裡的 `Terminal-type string` 選項改成 `xterm-256color`
+* 確定 `Window -> Colours` 的 `Allow terminal to use xterm 256-colour mode` 有打勾
+
+putty 的設定就算完成了
 
 ##Bash/Dircolors 設定
 
