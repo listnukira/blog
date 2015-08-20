@@ -29,7 +29,7 @@ tags:
 
 </pre>
 
-###Solution 1
+### Solution 1
 
 第一個方法用遞迴來實作，在每一次的遞迴會得到兩個指標 leftTail 和 rightTail，分別代表左右子樹轉成串列後的最尾端，根據這兩個指標調整樹的長相，最後遞迴會傳回整個串列的最尾端，如果 rightTail 不等於 NULL，則 rightTail 就是最尾端
 
@@ -85,7 +85,7 @@ public:
 };
 ```
 
-###Solution 2
+### Solution 2
 
 第二個方法與第一個方法想法差不多，但是改用非遞迴的方式寫
 

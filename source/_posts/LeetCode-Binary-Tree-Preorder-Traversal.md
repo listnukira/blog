@@ -11,7 +11,7 @@ tags:
 
 <!-- more -->
 
-###Solution 1
+### Solution 1
 
 第一個方法用遞迴
 
@@ -44,7 +44,7 @@ public:
 };
 ```
 
-###Solution 2
+### Solution 2
 
 第二個方法用迭代，用到一個堆疊暫存
 

@@ -11,7 +11,7 @@ tags:
 
 <!-- more -->
 
-###Solution
+### Solution
 
 以 `2 3 1 1 4` 為例子，會用到三個變數
 <pre>

@@ -11,7 +11,7 @@ tags:
 
 <!-- more -->
 
-###Solution
+### Solution
 
 用 `map` 紀錄元素(key)與索引值(index)的對應關係，每次都將元素新增進 `map`
 

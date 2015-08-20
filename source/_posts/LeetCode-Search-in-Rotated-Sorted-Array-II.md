@@ -11,7 +11,7 @@ tags:
 
 <!-- more -->
 
-###Solution
+### Solution
 
 因為會有重複的數字，所以必須多處理一種情況，當 `A[left] == A[middle]` 時，`left++` 再重新判斷，其它的處理跟原本一樣
 當重複的數字越多，時間複雜度會從 O(logN)上升到 O(N)

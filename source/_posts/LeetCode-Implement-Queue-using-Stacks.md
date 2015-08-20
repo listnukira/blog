@@ -13,7 +13,7 @@ tags:
 
 相似題: [Implement Stack using Queues](/LeetCode-Implement-Stack-using-Queues)
 
-###Solution
+### Solution
 
 用兩個 stack 來處理，每當 push 的時候，把 nums 裡的通通倒到 helper 裡，新增新的元素到 nums 裡，再把 helper 倒回 nums
 

@@ -11,7 +11,7 @@ tags:
 
 <!-- more -->
 
-###Solution 1
+### Solution 1
 
 第一個方法實作 Knuth-Morris-Pratt algorithm，也就是 KMP 演算法，重點在於 failure function 的了解與計算
 

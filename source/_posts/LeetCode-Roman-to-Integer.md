@@ -11,7 +11,7 @@ tags:
 
 <!-- more -->
 
-###Solution
+### Solution
 
 根據 wiki 的介紹，羅馬數字有七個
 

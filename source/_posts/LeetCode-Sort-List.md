@@ -12,7 +12,7 @@ tags:
 
 <!-- more -->
 
-###Solution
+### Solution
 
 O(NlogN) 的排序方法也沒有幾個，考慮到 link list 的特性，可以用的方法大概只剩 merge sort 了
 

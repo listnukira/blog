@@ -11,7 +11,7 @@ tags:
 
 <!-- more -->
 
-###Solution
+### Solution
 
 此題最好的解法就是用 Floyd's Cycle-Finding Algorithm，使用兩個指標 fast 和 slow，fast 每次往後移動兩步，slow 每次移動一步，如果串列存在迴圈，則這兩個指標一定會有重疊的時候，只要判斷到重疊就代表有迴圈存在
 

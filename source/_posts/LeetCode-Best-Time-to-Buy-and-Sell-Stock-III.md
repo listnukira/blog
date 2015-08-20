@@ -11,7 +11,7 @@ tags:
 
 <!-- more -->
 
-###Solution 1
+### Solution 1
 
 第一個方法分兩個步驟
 
@@ -46,7 +46,7 @@ public:
 };
 ```
 
-###Solution 2
+### Solution 2
 
 Discuss 裡看到的 general case solution，適用於各種交易次數，原理待研究
 

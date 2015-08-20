@@ -12,7 +12,7 @@ tags:
 
 與 [Excel Sheet Column Title](/-LeetCode-Excel-Sheet-Column-Title/) 相反的問題
 
-###Solution
+### Solution
 
 ``` c++
 class Solution {

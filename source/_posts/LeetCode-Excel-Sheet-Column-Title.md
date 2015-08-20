@@ -12,7 +12,7 @@ tags:
 
 與 [Excel Sheet Column Number](/-LeetCode-Excel-Sheet-Column-Number/) 相反的問題
 
-###Solution
+### Solution
 
 根據以下規則做換算
 

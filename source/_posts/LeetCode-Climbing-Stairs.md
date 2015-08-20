@@ -10,7 +10,7 @@ tags:
 
 <!-- more -->
 
-###Solution
+### Solution
 
 第 n 階的方法可以由 n - 1 階的方法數加上 n - 2 階的方法數所得到，所以本質上就是要計算 Fibonacci 數
 

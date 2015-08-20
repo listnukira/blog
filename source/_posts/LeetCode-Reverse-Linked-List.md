@@ -12,7 +12,7 @@ tags:
 
 分別用迭代和遞迴來解
 
-###Solution 1
+### Solution 1
 
 第一個方法用迭代
 
@@ -43,7 +43,7 @@ public:
 };
 ```
 
-###Solution 2
+### Solution 2
 
 第二個方法用遞迴，`reverseList(head->next)` 會傳回反轉後的串列頭，而 `head->next` 會指向反轉後的串列尾，`head->next->next = head` 把串列尾改指向 `head`，再將 `head->next` 指向 NULL，這樣就又反轉了一個節點，再將反轉後的串列頭回傳
 

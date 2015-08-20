@@ -10,7 +10,7 @@ tags:
 
 <!-- more -->
 
-###Solution
+### Solution
 
 用遞迴的方式去解可能會超時，所以改用 DP 的方式寫，建立陣列 canSegment，為了程式碼簡潔，canSegment 的大小為字串長度加一，並且把初始條件 canSegment[0] 設定為 true，接下來由字串的第一個字元開始判斷符不符合條件
 

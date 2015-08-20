@@ -11,7 +11,7 @@ tags:
 
 <!-- more -->
 
-###Solution
+### Solution
 
 step 記錄剩下的步數，每走一步就更新能走的步數
 走到倒數第二個數字如果 setp 大於 0 代表可以走到最後

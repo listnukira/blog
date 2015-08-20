@@ -10,7 +10,7 @@ tags:
 
 <!-- more -->
 
-###Solution
+### Solution
 
 這題比較偏數學計算，關鍵在
 `revX = revX * 10 + (x % 10)`

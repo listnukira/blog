@@ -13,7 +13,7 @@ tags: Linux Kernel
 * 到期後會執行指定的函式，並且不會重複執行
 
 
-###結構
+### 結構
 
 計時器的結構為 `struct timer_list`，被定義在 `include/linux/timer.h`，這裡只列出比較重要的幾個成員
 
@@ -26,19 +26,19 @@ struct timer_list {
 };
 ```
 
-###定義
+### 定義
 
 <pre>
 struct timer_list demo_timer
 </pre>
 
-###初始化
+### 初始化
 
 <pre>
 init_timer(&demo_timer)
 </pre>
 
-###設定
+### 設定
 
 <pre>
 demo_timer.expires = jiffies + delay; /* 計時器在 delay 個週期後到期 */
@@ -46,7 +46,7 @@ demo_timer.data = 0;                  /* 將 0 傳給到期處理函式 */
 demo_timer.function = demo_function;  /* 設定到期後會處理的函式為 demo_function */
 </pre>
 
-###啟用
+### 啟用
 
 <pre>
 add_timer(&demo_timer);
@@ -54,7 +54,7 @@ add_timer(&demo_timer);
 
 在核心裡 `add_timer()` 會呼叫到 `mod_timer()`，所以其實也可以用 `mod_timer()` 來取代
 
-###修改到期時間
+### 修改到期時間
 
 <pre>
 mod_timer(&demo_timer, jiffies + new_delay);
@@ -62,7 +62,7 @@ mod_timer(&demo_timer, jiffies + new_delay);
 
 此函式也可以用在尚未啟用的計時器上，若 `demo_timer` 沒啟用，此函式會啟用它
 
-###刪除
+### 刪除
 
 刪除計時器有兩種方式
 
@@ -77,7 +77,7 @@ mod_timer(&demo_timer, jiffies + new_delay);
 因為無法確定計時器的處理函式是不是正在執行，刪除計時器應該優先使用同步版本的 `del_timer_sync()`
 在單處理器的系統中，`del_timer_sync()` 會被定義成 `del_timer()`，所以應該使用同步的版本
 
-###注意事項
+### 注意事項
 
 因為計時器的執行與目前正在執行的程式碼是非同步的，所以有可能會有 race condition 的情況發生，不要用以下的程式碼來代替 `mod_timer()`
 
@@ -87,7 +87,7 @@ demo_timer->expires = jiffies + new_delay;
 add_timer(&demo_timer);
 </pre>
 
-###範例
+### 範例
 
 這個範例簡單的示範 `timer` 的用法，每隔 `1 2 3 ...` 秒執行 `timer_function` 函式，函式會印出傳進來的參數跟目前的 `jiffies` 值，然後再設定 `timer` 重新執行
 

@@ -10,7 +10,7 @@ tags:
 
 <!-- more -->
 
-###Solution
+### Solution
 
 用一個同樣大小的陣列 needFlip 記錄是否要改值，預設都為 true
 堆疊 coordinate 記錄需要處理的座標

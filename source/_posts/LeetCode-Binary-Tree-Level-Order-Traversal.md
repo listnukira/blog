@@ -11,7 +11,7 @@ tags:
 
 <!-- more -->
 
-###Solution
+### Solution
 
 二維陣列 ret 代表最後要回傳的陣列，當 ret.size 等於 level 時，代表目前所在的 level 之前並沒有到過，所以新增一個一維陣列進 ret，接著根據 level 將值放到不同的陣列，最後 ret 便會根據 level order 的順序擺放
 

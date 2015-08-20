@@ -10,7 +10,7 @@ tags:
 
 <!-- more -->
 
-###Solution
+### Solution
 
 先用兩個指標 fast，slow，以 2:1 的速度往後走，當 fast 等於 NULL 時，slow 會在串列的中間，接著用一個堆疊 s 存指向節點的指標，把串列中間以後的指標都放進堆疊，再從頭插入串列
 

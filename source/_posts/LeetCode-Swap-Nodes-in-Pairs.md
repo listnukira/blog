@@ -11,7 +11,7 @@ tags:
 
 <!-- more -->
 
-###Solution
+### Solution
 
 練習 linked list 的題目，圖畫出來就很清楚了
 

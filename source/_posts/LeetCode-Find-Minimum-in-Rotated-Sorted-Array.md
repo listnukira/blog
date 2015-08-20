@@ -12,7 +12,7 @@ tags:
 
 <!-- more -->
 
-###Solution
+### Solution
 
 這題有點類似 [Find-Peak-Element](/-LeetCode-Find-Peak-Element)，一樣用二分法來找
 

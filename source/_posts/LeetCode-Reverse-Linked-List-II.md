@@ -10,7 +10,7 @@ tags:
 
 <!-- more -->
 
-###Solution
+### Solution
 
 用四個指標記錄不同的節點，分別是反轉後的頭 reverseHead 跟尾 reverseTail，尾的下一個 connTail，頭的上一個 connHead
 

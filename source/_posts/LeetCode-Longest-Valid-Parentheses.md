@@ -11,7 +11,7 @@ tags:
 
 <!-- more -->
 
-###Solution
+### Solution
 
 在解 Valid Parentheses 時，堆疊裡存的是左括號，遇到右括號就 pop，最後以堆疊是否為空來判斷是不是合法的括號組合
 

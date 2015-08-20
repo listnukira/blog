@@ -11,7 +11,7 @@ tags:
 
 <!-- more -->
 
-###Solution
+### Solution
 
 1. 宣告兩個指標 first 和 second，一開始都指向 head
 2. second 往後移動 N 個節點，如果移動完之後 second 等於 NULL，代表要刪除的是第一個節點，回傳第二個節點

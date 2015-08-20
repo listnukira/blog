@@ -11,9 +11,9 @@ tags:
 
 ---
 
-##Dynamically Lodaded Libraries
+## Dynamically Lodaded Libraries
 
-###簡介
+### 簡介
 
 動態載入函式庫是一種在需要的時候才載入的函式庫。在實作外掛或者模組時特別有用，當程式需要用到的時候才載入外掛或模組。舉例來說，Pluggable Authenticaltion Modules (PAM) 使用動態載入函式庫來允許管理者設定或重新設定認證。
 
@@ -21,7 +21,7 @@ tags:
 
 Linux 使用的介面基本上跟 Solaris 一樣，都是 dlopen()，但是並不是所有的平台都支援。HP-UX 使用 shl\_load() 的機制而 Windows 使用完全不同的 DLLs 介面，如果考慮到平台間的可攜性，可能就必須考慮使用隱藏不同平台間差異的包裝函式庫，一種方法是使用 glib，glib 使用平台基本的動態載入函式實作可攜性的介面，在 glib 的網站可以得到更多的相關資訊 [Dynamic Loading of Modules](http://developer.gnome.org/glib/stable/glib-Dynamic-Loading-of-Modules.html)，另一種方法是使用 libltdl，它是 GNU libtool 的一部分，想知道更多資訊的話可以去尋找 CORBA Object Request Broker (ORB) 的資料，這篇文章主要介紹 Linux 和 Solaris 提供的介面。
 
-###dlopen()
+### dlopen()
 
 dlopen 函式開啟一個函式庫以供使用，在 C 的原型是：
 
@@ -43,11 +43,11 @@ dlopen() 的回傳值是一個 handle 值，對其他函式庫來說應該是不
 
 如果函式庫依賴於其它的函式庫 (X 依賴 Y)，必須先載入被依賴的函式庫 (先載入 Y，再載入 X)。
 
-###dlerror()
+### dlerror()
 
 呼叫 dlerror() 可以取得相關的錯誤資訊，會回傳一個字串描述最近一次呼叫的 dlopen()，dlsym()，或者 dlclose()。一個比較特別的行為是當呼叫了 dlerror() 之後，之後呼叫 dlerror() 都會傳回 NULL 直到另一個錯誤發生。
 
-###dlsym()
+### dlsym()
 
 載入一個函式庫而不去使用是沒有意義的，主要使用函式庫的函式是 dlsym，這個函式會在已經打開的函式庫內尋找符號，函式被定義成：
 
@@ -71,13 +71,13 @@ handle 是從 dlopen 回傳的値，symbol 是一個由 '\0' 結束的字串。�
 
 ```
 
-###dlclose()
+### dlclose()
 
 dlopen() 的相反是 dlclose()，也就是關閉一個函式庫。如果一個函式庫被釋放，\_fini() 函式會被呼叫 (如果存在的話)，前面有提到這是一個過時的機制，因此不應該繼續使用。相反的，函式庫應該使用 \_\_attribute((destructor)) 這個函式屬性來匯出函式。
 
 Note：dlclose() 成功會回傳 0，失敗傳回非 0 値，一些 Linux 的 man page 沒有提到這個。
 
-###DL Library Example
+### DL Library Example
 
 這個範例開啟第一個參數指定的函式庫，尋找第二個參數指定的符號，並且在每個步驟中都確認是否有錯誤發生
 

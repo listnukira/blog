@@ -10,7 +10,7 @@ tags:
 
 <!-- more -->
 
-###Solution
+### Solution
 
 用一個 256 大小的陣列當 hash table，key 是字元的 ascii 碼，value 是索引值，如果對應的索引值不同，代表不是 isomorphic，字元重覆出現的話，會更新索引值，索引值最小由 1 開始，因為 hash table 的 value 一開始預設為 0
 

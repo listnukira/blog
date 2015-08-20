@@ -13,7 +13,7 @@ tags:
 
 <!-- more -->
 
-###Solution
+### Solution
 
 這題的解法有很多種，這邊用 [Moore voting algorithm](http://www.geeksforgeeks.org/majority-element/) 來解
 

@@ -11,7 +11,7 @@ tags:
 
 <!-- more -->
 
-###Solution
+### Solution
 
 多用一個變數 repeat 存數字的重複次數，當 repeat 值大於 1 時跳過重複的數字，遇到不同數字時把 repeat 設為 0
 

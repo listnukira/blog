@@ -12,7 +12,7 @@ tags:
 
 分別用遞迴和迭代來實作
 
-###Solution 1
+### Solution 1
 
 第一個方法用遞迴
 
@@ -42,7 +42,7 @@ public:
 };
 ```
 
-###Solution 2
+### Solution 2
 
 第二個方法用 queue 來存要處理的節點，將左右節點交換後就從 queue 中刪除
 

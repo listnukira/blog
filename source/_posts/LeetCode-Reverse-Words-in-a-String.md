@@ -10,7 +10,7 @@ tags:
 
 <!-- more -->
 
-###Solution
+### Solution
 
 用 C++ 的 stringstream 可以很簡單的處理
 

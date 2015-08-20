@@ -12,7 +12,7 @@ tags:
 
 原本的配色是 [seoul256](https://github.com/junegunn/seoul256.vim)，最近換成 [solarized](http://ethanschoonover.com/solarized) 的配色，紀錄我做過的動作
 
-##Putty 設定
+## Putty 設定
 
 因為平常都是用 putty 來連到遠端的設備，根據[官方](http://ethanschoonover.com/solarized/vim-colors-solarized)的說法，必須將 putty 配色也改成 Solarized 的，如果不想更改 putty 的配色也可以，有提供選項 `let g:solarized_termcolors=256` 支援，但效果很差，不如不換...
 
@@ -25,7 +25,7 @@ tags:
 
 putty 的設定就算完成了
 
-##Bash/Dircolors 設定
+## Bash/Dircolors 設定
 
 改了 putty 的配色後，執行 `ls` 會發現不同檔案類型的顏色差異變得很不清楚，目前參考 [Better dircolors with Solarized](http://archlinux.me/w0ng/2012/04/21/better-dircolors-with-solarized/) 的做法，在家目錄下放修改過後的 [dircolors](https://github.com/listnukira/dot-files/blob/master/dircolors)，然後在 `bashrc` 加上
 
@@ -33,7 +33,7 @@ putty 的設定就算完成了
 
 這行指令會修改環境變數 `LS_COLORS` 的設定
 
-##Vim 設定
+## Vim 設定
 
 因為目前用 [Vundle](https://github.com/VundleVim/Vundle.vim) 來管理套件，所以 vimrc 裡要加上
 
@@ -50,7 +50,7 @@ set background=dark
 
 `highlight clear SignColumn`
 
-##Tmux 設定
+## Tmux 設定
 
 Tmux 也有關於 Solarized 的配色，將[設定檔](https://github.com/seebi/tmux-colors-solarized/blob/master/tmuxcolors-dark.conf)加入 tmux.conf 就完成了
 

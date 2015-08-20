@@ -11,7 +11,7 @@ tags:
 
 <!-- more -->
 
-###Solution
+### Solution
 
 `dummyHead` 指向已經排序好的串列
 `nextNode` 指向還沒處理的節點串列頭

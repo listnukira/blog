@@ -10,7 +10,7 @@ tags:
 
 <!-- more -->
 
-###Solution
+### Solution
 
 新串列的開頭有可能會變動，所以用 fakeHead 來幫忙，`fakeHead.next` 會指向新的串列頭，接著需要過濾掉重複的數字
 

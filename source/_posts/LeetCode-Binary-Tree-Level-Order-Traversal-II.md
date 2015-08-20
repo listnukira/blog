@@ -11,11 +11,11 @@ tags:
 
 <!-- more -->
 
-###Solution 1
+### Solution 1
 
 因為要把結果反著放，所以可以把 [Binary Tree Level Order Traversal](/-LeetCode-Binary-Tree-Level-Order-Traversal/) 得到的陣列反轉就是答案了，也就是將 `return ret;` 改成 `return vector<vector<int> >(ret.rbegin(), ret.rend());`
 
-###Solution 2
+### Solution 2
 
 因為第一個方法太取巧了，所以第二個方法稍微修改遞迴的程式碼，將原本從陣列最後面新增的 `vector<int>` 改成從陣列的開頭插入，將值放入陣列會根據 ret.size 和 level 來決定， level 大的會放在靠近陣列開頭的位置
 

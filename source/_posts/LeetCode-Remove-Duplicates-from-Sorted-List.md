@@ -10,7 +10,7 @@ tags:
 
 <!-- more -->
 
-###Solution
+### Solution
 
 用一個 current 指標，從頭開始走遍串列，如果下一個節點的值跟自己一樣就跳過
 

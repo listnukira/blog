@@ -13,7 +13,7 @@ tags:
 
 相似題: [Implement Queue using Stacks](/LeetCode-Implement-Queue-using-Stacks)
 
-###Solution 1
+### Solution 1
 
 用兩個 queue 來處理，每當 push 的時候，把 nums 裡的通通倒到 helper 裡，新增新的元素到 nums 裡，再把 helper 倒回 nums
 
@@ -55,7 +55,7 @@ private:
 };
 ```
 
-###Solution 2
+### Solution 2
 
 第二個方法只會用到一個 queue，每次新增的值都會在 queue 的尾端，再把其它的值都吐出來加到 queue 的尾端
 

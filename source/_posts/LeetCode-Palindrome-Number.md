@@ -10,7 +10,7 @@ tags:
 
 <!-- more -->
 
-###Solution 1
+### Solution 1
 
 第一個方法先找出數字是幾位數的，之後從左右兩邊來判斷數字是否相同
 
@@ -40,7 +40,7 @@ public:
 };
 ```
 
-###Solution 2
+### Solution 2
 
 第二個方法用 [Reverse Integer](/-LeetCode-Reverse-Integer/) 的方式將題目給的數字反轉，反轉完如果相等代表就是迴文
 

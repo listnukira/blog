@@ -11,7 +11,7 @@ tags:
 
 <!-- more -->
 
-###Solution
+### Solution
 
 用來練習 DP 的題目，用 Bottom up 的方式來建 table
 

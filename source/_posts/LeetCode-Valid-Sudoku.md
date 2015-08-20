@@ -10,7 +10,7 @@ tags:
 
 <!-- more -->
 
-###Solution
+### Solution
 
 用 C++ 的 `unordered_set` 來做，每行每列加上每個區塊，總共有 27 個 `unordered_set`，接著便可以判斷有沒有重複
 

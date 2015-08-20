@@ -10,7 +10,7 @@ tags:
 
 <!-- more -->
 
-###Solution 1
+### Solution 1
 
 第一個方法很直覺，每個位元都判斷一次，32 位元比對 32 次之後就能知道結果
 
@@ -31,7 +31,7 @@ public:
 };
 ```
 
-###Solution 2
+### Solution 2
 
 第二個方法利用 C++ STL 提供的 bit-array 結構，直接算出答案
 
@@ -45,7 +45,7 @@ public:
 };
 ```
 
-###Solution 3
+### Solution 3
 
 第三個方法是從 [Hamming weight](http://en.wikipedia.org/wiki/Hamming_weight) 看來的，每次都把 n 與 n - 1 做 AND 運算，每做一次運算，n 都會少掉最右邊的 1，所以用這個方法的話，有多少個位元為 1，就會做幾次 AND 運算
 

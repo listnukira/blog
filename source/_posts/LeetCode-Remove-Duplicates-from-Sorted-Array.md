@@ -11,7 +11,7 @@ tags:
 
 <!-- more -->
 
-###Solution
+### Solution
 
 從頭開始重新指定陣列的值，len 記錄目前的長度，遇到重複的就跳過
 

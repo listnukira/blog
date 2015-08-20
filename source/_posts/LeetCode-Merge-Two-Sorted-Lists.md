@@ -10,7 +10,7 @@ tags:
 
 <!-- more -->
 
-###Solution 1
+### Solution 1
 
 第一個方法用 iteration 的方式，判斷兩個串列的大小，小的加到 fakeHead 後面，當 while 迴圈結束之後，l1 或 l2 會有一個是 NULL，把不是 NULL 的串列接到 fakeHead 的最後
 
@@ -47,7 +47,7 @@ public:
 };
 ```
 
-###Solution 2
+### Solution 2
 
 第二個方法用 recursive 的方式，程式碼比較簡潔
 

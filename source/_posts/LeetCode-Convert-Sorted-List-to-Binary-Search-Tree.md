@@ -13,7 +13,7 @@ tags:
 
 與 [Convert Sorted Array to Binary Search Tree](/-LeetCode-Convert-Sorted-Array-to-Binary-Search-Tree/) 類似的題目，不同的地方在於與排序過的陣列相比，排序過的串列存取中間的元素不再是 O(1) 的時間複雜度
 
-###Solution 1
+### Solution 1
 
 第一個方法與 [Convert Sorted Array to Binary Search Tree](/-LeetCode-Convert-Sorted-Array-to-Binary-Search-Tree/) 類似，找出串列的中間節點當作根節點，串列的左邊與右邊也以同樣的方式新增節點
 
@@ -66,7 +66,7 @@ public:
 };
 ```
 
-###Solution 2
+### Solution 2
 
 第二個方法是參考底下 Reference 網站寫出來的
 
