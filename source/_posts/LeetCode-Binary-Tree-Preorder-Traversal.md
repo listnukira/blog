@@ -7,9 +7,11 @@ tags:
 - Tree
 - Stack
 ---
-給一個二元樹，傳回由前置式所表示的陣列
+傳回二元樹的前序排列
 
 <!-- more -->
+
+類似的題目: [Binary Tree Inorder Traversal](/LeetCode-Binary-Tree-Inorder-Traversal)
 
 ### Solution 1
 
