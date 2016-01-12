@@ -5,6 +5,8 @@ tags:
 - LeetCode
 - C/C++
 - Bit Manipulation
+- Hash Table
+toc: false
 ---
 給一個整數陣列，每個數字都會出現兩次，只有一個數字會出現一次，要在線性時間並且沒用到額外記憶體的情況下找出這個只出現一次的數字
 
@@ -17,11 +19,10 @@ tags:
 ``` c++
 class Solution {
 public:
-    int singleNumber(int A[], int n) {
+    int singleNumber(vector<int>& nums) {
         int result = 0;
-        for (int i = 0; i < n; i++) {
-            result ^= A[i];
-        }
+        for (auto i: nums)
+            result ^= i;
 
         return result;
     }
