@@ -6,8 +6,9 @@ tags:
 - C/C++
 - Linked List
 - Two Pointers
+toc: false
 ---
-延續 [Linked List Cycle](/2014/09/01/-LeetCode-Linked-List-Cycle/)，此題要找出串列裡迴圈開始的起點，沒有迴圈則回傳 NULL
+延續 [Linked List Cycle](/LeetCode-Linked-List-Cycle/)，此題要找出串列裡迴圈開始的起點，沒有迴圈則回傳 NULL
 
 <!-- more -->
 

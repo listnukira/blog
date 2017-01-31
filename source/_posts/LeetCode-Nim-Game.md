@@ -4,6 +4,7 @@ categories: LeetCode
 tags:
 - LeetCode
 - C/C++
+- Brain teaser
 toc: false
 ---
 判斷能否贏得 Nim Game

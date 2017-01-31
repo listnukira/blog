@@ -27,7 +27,7 @@ putty 的設定就算完成了
 
 ## Bash/Dircolors 設定
 
-改了 putty 的配色後，執行 `ls` 會發現不同檔案類型的顏色差異變得很不清楚，目前參考 [Better dircolors with Solarized](http://archlinux.me/w0ng/2012/04/21/better-dircolors-with-solarized/) 的做法，在家目錄下放修改過後的 [dircolors](https://github.com/listnukira/dot-files/blob/master/dircolors)，然後在 `bashrc` 加上
+改了 putty 的配色後，執行 `ls` 會發現不同檔案類型的顏色差異變得很不清楚，目前修改過後的 [dircolors](https://github.com/listnukira/dot-files/blob/master/dircolors) 來修正這個問題，然後在 `bashrc` 加上
 
 `test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"`
 
@@ -39,9 +39,12 @@ putty 的設定就算完成了
 
 `Plugin 'altercation/vim-colors-solarized'`
 
-vimrc 的其它設定
+如果沒有用任何套件管理工具的話，可以參考 [Manual installation](https://github.com/altercation/vim-colors-solarized#option-1-manual-installation)
+
+vimrc 的設定
 
 <pre>
+syntax enable
 colorscheme solarized
 set background=dark
 </pre>

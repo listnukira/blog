@@ -6,6 +6,7 @@ tags:
 - C/C++
 - Linked List
 - Two Pointers
+toc: false
 ---
 移除串列從後面數來的第 N 個節點
 
@@ -13,41 +14,36 @@ tags:
 
 ### Solution
 
-1. 宣告兩個指標 first 和 second，一開始都指向 head
-2. second 往後移動 N 個節點，如果移動完之後 second 等於 NULL，代表要刪除的是第一個節點，回傳第二個節點
-3. first 和 second 同時往後移動，直到 second->next 等於 NULL 為止
-4. 要刪除的節點會是 first->next
+1. 宣告兩個指標 fast 和 slow，一開始都指向 head
+2. fast 先往後移動 N 個節點，如果移動完之後 fast 等於 NULL，代表要刪除的是第一個節點，回傳第二個節點
+3. fast 和 slow 同時往後移動，直到 fast->next 等於 NULL 為止
+4. 要刪除的節點會是 slow->next
 
 ``` c++
 /**
  * Definition for singly-linked list.
  * struct ListNode {
  *     int val;
- *     ListNode *next;
- *     ListNode(int x) : val(x), next(NULL) {}
+ *     struct ListNode *next;
  * };
  */
-class Solution {
-public:
-    ListNode *removeNthFromEnd(ListNode *head, int n) {
-        struct ListNode *first, *second;
-        first = second = head;
+struct ListNode* removeNthFromEnd(struct ListNode* head, int n) {
+    struct ListNode *fast, *slow;
 
-        for (int i = 0; i < n; i++)
-            second = second->next;
+    fast = slow = head;
+    for (;n > 0; n--)
+        fast = fast->next;
 
-        if (second == NULL)
-            return first->next;
+    if (!fast)
+        return slow->next;
 
-        while (second->next != NULL) {
-            first = first->next;
-            second = second->next;
-        }
-
-        struct ListNode* delNode = first->next;
-        first->next = delNode->next;
-
-        return head;
+    while (fast->next) {
+        fast = fast->next;
+        slow = slow->next;
     }
-};
+
+    slow->next = slow->next->next;
+
+    return head;
+}
 ```
