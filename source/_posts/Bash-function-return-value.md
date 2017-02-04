@@ -1,4 +1,4 @@
-title: Bash 函式回傳值
+title: '[Bash] 函式回傳值'
 date: 2016-11-29 00:39:22
 categories: Linux
 tags: Bash

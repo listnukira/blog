@@ -13,7 +13,7 @@ Tmux 編譯需要 libevent，而 libevent 需要 ncurses，如果不知道主機
 ### Version
 ncurses: 5.9
 libevent: 2.1.8-stable
-tmux: master, 9b9a5a292d
+tmux: 2.3
 
 ### ncurses
 ``` bash
@@ -38,6 +38,7 @@ make install
 ``` bash
 git clone https://github.com/tmux/tmux
 cd tmux
+git co 2.3
 ./autogen.sh
 
 ./configure --prefix=/home/${USER}/local LIBEVENT_CFLAGS="-I/home/${USER}/local/include" LIBEVENT_LIBS="-L/home/${USER}/local/lib -levent"
