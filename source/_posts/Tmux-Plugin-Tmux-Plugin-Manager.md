@@ -3,22 +3,22 @@ date: 2017-02-02 01:02:56
 categories: Tmux
 tags: Tmux
 ---
-[Tmux Plugin Manager](https://github.com/tmux-plugins/tpm)
+[Tmux Plugin Manager](https://github.com/tmux-plugins/tpm) 用來管理所有的 Tmux Plugins
 
 <!-- more -->
 
 ### TPM Installation
 
-#### 自動安裝
+* **自動安裝**
 [Automatic tpm installation](https://github.com/tmux-plugins/tpm/blob/master/docs/automatic_tpm_installation.md)
 在 .tmux.conf 裡新增以下這段
+這段要在 run '~/.tmux/plugins/tpm/tpm' 之前，加完後重新啟動 Tmux
 ```
 if "test ! -d ~/.tmux/plugins/tpm" \
    "run 'git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm && ~/.tmux/plugins/tpm/bin/install_plugins'"
 ```
-這段要在 run '~/.tmux/plugins/tpm/tpm' 之前，加完後重新啟動 Tmux
 
-#### 手動安裝
+* **手動安裝**
 直接抓 TPM 到 ~/.tmux/plugins/tpm
 ```
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
@@ -35,13 +35,13 @@ run '~/.tmux/plugins/tpm/tpm'
 ```
 
 ### TPM Usage
-安裝 plugin
+**安裝 plugin**
    1. 在 .tmux.conf 裡加上 `set -g @plugin '<plugin>'`
    2. 按 prefix + I 安裝
 
-更新 plugin
+**更新 plugin**
    1. 按 prefix + U 更新
 
-移除 plugin
+**移除 plugin**
    1. 在 .tmux.conf 裡把要移除的 plugin 刪除或註解
    2. 按 prefix + alt + u，移除

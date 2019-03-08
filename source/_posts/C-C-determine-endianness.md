@@ -8,7 +8,14 @@ toc: false
 
 <!-- more -->
 
-這個函式是在核心的 module-init-tools 裡看到的
+`Big Endian`
+資料從 MSB 開始放到最低的記憶體位址上
+
+`Little Endian`
+資料從 LSB 開始放到最低的記憶體位址上 
+
+
+這個函式是在 module-init-tools 裡看到的
 
 ```c util.c
 int endianness()
@@ -22,5 +29,5 @@ int endianness()
 Big Endian    會是 `0x01000002`
 Little Endian 會是 `0x02000001`
 
-之後再由 char 來取最低位址的值回傳，回傳 1 代表 Little Endian，2 代表 Big Endian
+之後再由 char 來取 LSB 的值回傳，回傳 1 代表 Little Endian，2 代表 Big Endian
 

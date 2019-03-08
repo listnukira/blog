@@ -4,6 +4,7 @@ categories: Hexo
 tags:
 - Hexo
 - Nginx
+toc:false
 ---
 
 記錄目前 Nginx 上關於 Hexo 的設定檔
@@ -12,7 +13,7 @@ tags:
 
 ## Configure file
 
-設定檔在 `/etc/nginx/sites-available/blog`
+設定檔以我的例子是放在 `/etc/nginx/sites-available/blog`
 
 <pre>
 server {
@@ -21,10 +22,20 @@ server {
 
 server {
     listen 80;
+    listen [::]:443 ssl default_server;
+
+    ssl_certificate /etc/letsencrypt/live/blog.listnukira.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/blog.listnukira.com/privkey.pem;
+
     root /home/listnukira/blog;
     server_name blog.listnukira.com;
+
     access_log  /var/log/nginx/blog_access.log;
     error_log   /var/log/nginx/blog_error.log;
+
+    if ($scheme != "https") {
+        return 301 https://$server_name$request_uri;
+    }
 
     location ~* ^.+\.(ico|gif|jpg|jpeg|png)$ {
             root /home/listnukira/blog;
@@ -47,5 +58,5 @@ server {
 }
 </pre>
 
-## Reference
-http://blog.rjjacky.info/2014/04/30/deploy-hexo-on-nginx/
+2018/08/30 修改 https 相關設定
+
